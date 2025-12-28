@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #2c3e50; /* Koyu Mavi/Gri */
+    --accent-color: #3498db; /* Açık Mavi Vurgu */
+    --text-color: #333;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Header / Başlık Kısmı */
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-info {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.95rem;
+}
+
+.contact-info a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--accent-color);
+}
+
+.contact-info i {
+    color: var(--accent-color);
+    margin-right: 5px;
+}
+
+/* Bölüm Başlıkları */
+h2 {
+    color: var(--primary-color);
+    border-left: 5px solid var(--accent-color);
+    padding-left: 10px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+/* İçerik Düzeni */
+p {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none; /* Standart mermileri kaldır */
+    padding-left: 0;
+}
+
+/* Proje ve Deneyim Listeleri */
+.project-item, .job-item {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #eee;
+}
+
+.project-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.project-desc ul {
+    list-style-type: disc; /* İçerik maddeleri için nokta */
+    padding-left: 20px;
+    color: #555;
+}
+
+/* Yetenekler Tablosu/Listesi */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skill-category strong {
+    display: block;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+}
